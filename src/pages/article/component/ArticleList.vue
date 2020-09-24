@@ -1,25 +1,46 @@
 <template>
     <div>
         <ul class="article-list">
-            <li v-for="(article,index) in articleList" :key="index" @click="readArticle(article.id)">
+            <li v-for="(article,index) in articleList" :key="index">
                 <div style="display: flex">
-                                <span style="font-size: 18px;font-weight: bold">
+                                <span style="font-size: 18px;font-weight: bold" @click="readArticle(article.id)">
                                     {{article.title}}
                                 </span>
-                    <div style="margin-left: auto"><span class="author">{{article.author}}</span><span class="author">{{article.type}}</span></div>
+                    <div style="margin-left: auto"><span class="author">{{article.author}}·</span><span class="author">{{article.type}}</span></div>
                 </div>
-                <div class="art-content"> <span>{{index+1}}</span>{{article.content}}</div>
+                <div class="art-content" @click="readArticle(article.id)">{{article.content}}</div>
+                <div class="art-meta">
+                    <div style="display: flex">
+                    <span><img :src="createTimeImg" style="width: 30px;height: 30px;display: inline-block"/></span>
+                    <div class="mate-font">{{article.createDate}}</div>
+                    </div>
+                    <div>
+                        <el-button-group>
+                            <el-button  icon="el-icon-share" size="mini">赞<span style="margin-left: 3px">{{article.agree}}</span></el-button>
+                            <el-button  icon="el-icon-delete" size="mini">踩<span style="margin-left: 3px">{{article.disagree}}</span></el-button>
+                        </el-button-group>
+                    </div>
+                </div>
                 <el-divider></el-divider>
             </li>
         </ul>
+        <div style="text-align: right">
+        <el-pagination
+                background
+                layout="prev, pager, next"
+                :total="1000">
+        </el-pagination>
+        </div>
     </div>
 </template>
 <script>
     import articleData from '../../../data/article'
+    import createDateImg from "../../../assets/createDate.jpg"
     export default {
         data(){
             return{
-                articleList:articleData
+                articleList:articleData,
+                createTimeImg:createDateImg
             }
         },
         methods:{
@@ -37,9 +58,12 @@
     .article-list li {
         padding: 10px 0px;
     }
+    .article-list li .art-content{
+        color: gray;
+    }
     .article-list li .art-content:hover{
         cursor: pointer;
-        color: gray;
+        font-style: italic;
     }
     .author{
         font-size: 13px;
@@ -61,5 +85,22 @@
     }
     a{
         color: black;
+    }
+    .el-pagination.is-background .el-pager li:not(.disabled).active{
+        background-color: #606266 !important;
+    }
+    .art-meta{
+        margin-top: 15px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .mate-font{
+        line-height: 32px;
+        margin-left: 10px;
+        color: darkgray;
+    }
+    .article-list .el-divider--horizontal{
+        margin: 10px 0 !important;
     }
 </style>

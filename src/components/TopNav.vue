@@ -52,7 +52,8 @@
     }
     .top-box{
         z-index: 999;
-        background-color: white;
+        background-color: #303133;
+        opacity: 0.8;
         border-bottom: 1px solid #f4f4f4;
         width: 100%;
         height: 55px;
@@ -78,6 +79,7 @@
         align-items: center;
         display: flex;
         cursor: pointer;
+        color: #f3f6f8;
         margin-left: 5px;
         &.hover{
             background-color: #42b983;

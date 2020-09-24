@@ -9,7 +9,7 @@
                 </div>
             </el-col>
             <el-col :span="8">
-                <RightNav></RightNav>
+                <RightNav v-bind:hots="hotData" v-bind:tags="tagData" v-bind:user-info="userInfo"></RightNav>
             </el-col>
         </el-row>
     </div>
@@ -18,13 +18,19 @@
     import articleData from '../../data/article'
     import RightNav from "../../components/RightNav";
     import ArticleList from "./component/ArticleList";
+    import hotData from "../../data/hot.json"
+    import tagData from "../../data/tag.json"
+    import userInfo from "../../data/userInfo.json"
     export default {
         components:{
           RightNav,ArticleList
         },
         data(){
             return{
-                articleList:articleData
+                articleList:articleData,
+                hotData:hotData,
+                tagData:tagData,
+                userInfo:userInfo
             }
         }
     }
@@ -35,6 +41,7 @@
     margin-top: 30px;
     min-width: 700px;
     max-width: 900px;
+    min-height: 500px;
     padding: 50px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
     border-radius: 2px;

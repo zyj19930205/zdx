@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,"tagName": "学习",
+    "type": ""
+  },
+  {
+    "id": 2,"tagName": "心得",
+    "type": "success"
+  },
+  {
+    "id": 3,"tagName": "美食",
+    "type": "info"
+  },
+  {
+    "id": 4,"tagName": "游戏",
+    "type": "danger"
+  }
+]
