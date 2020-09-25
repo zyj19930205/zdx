@@ -6,6 +6,7 @@ import UserCenter from "./pages/usercenter/UserCenter";
 import Article from "./pages/article/Article";
 import ArticleView from "./pages/article/ArticleView";
 import ArticleList from "./pages/article/component/ArticleList";
+import WriteArticle from "./pages/article/WriteArticle";
 
 Vue.use(Router)
 
@@ -28,6 +29,7 @@ export default new Router({
                 }
             ]
         },
+        {path:'/write',name: 'WriteArticle',component: WriteArticle},
         {path:'/tool',name:'ToolBox',component:ToolBox},
         {path:'/userCenter',name:'UserCenter',component:UserCenter}
         // {path:'/articleView/:id',name:'articleView',component:ArticleView,props: true}

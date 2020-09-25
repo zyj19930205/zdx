@@ -8,6 +8,10 @@
                 <div class="articleTitle">{{articleDetail.title}}</div>
                 <div class="articleMeta"><span>{{articleDetail.author}}</span><span>{{articleDetail.createDate}}</span></div>
                 <div class="articleContent" v-html="articleDetail.content"></div>
+                <div class="comment">
+                    <el-divider content-position="left">评论区</el-divider>
+                    <Comment></Comment>
+                </div>
             </div>
         </div>
     </div>
@@ -15,10 +19,11 @@
 <script>
     import RightNav from "../../components/RightNav";
     import articleDetail from "../../data/articleDetail"
+    import Comment from "./component/Comment";
     export default {
         props: ['id'],
         components: {
-            RightNav
+            RightNav,Comment
         },
         data() {
             return {
@@ -72,5 +77,8 @@
     .articleContent{
         margin-top: 20px;
         line-height: 25px;
+    }
+    .comment{
+        margin-top: 150px;
     }
 </style>

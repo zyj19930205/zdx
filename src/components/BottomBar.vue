@@ -20,5 +20,6 @@
         text-align: center;
         font-size: 12px;
         padding-top: 20px;
+        color: #606266;
     }
 </style>

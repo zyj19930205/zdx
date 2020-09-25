@@ -5,7 +5,7 @@
             <div class="top-nav-list">
                 <ul>
                     <router-link to="/" exact><li class="hvr-fade">首页</li></router-link>
-                    <router-link to="/"><li li class="hvr-fade">写文</li></router-link>
+                    <router-link to="/write"><li li class="hvr-fade">写文</li></router-link>
                     <router-link to="/tool"><li li class="hvr-fade">工具箱</li></router-link>
                     <router-link to="/userCenter"><li li class="hvr-fade">我的</li></router-link>
                 </ul>

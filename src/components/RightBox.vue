@@ -40,4 +40,9 @@
             font-size: 14px;
         }
     }
+    .hvr-bounce-to-right:before{
+        background: #141e30; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 </style>
