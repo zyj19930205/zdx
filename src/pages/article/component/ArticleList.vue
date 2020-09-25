@@ -4,6 +4,7 @@
             <li v-for="(article,index) in articleList" :key="index">
                 <div style="display: flex">
                                 <span style="font-size: 18px;font-weight: bold" @click="readArticle(article.id)">
+                                    <span v-if="article.agree > 15">[荐]</span>
                                     {{article.title}}
                                 </span>
                     <div style="margin-left: auto"><span class="author">{{article.author}}·</span><span class="author">{{article.type}}</span></div>

@@ -1,7 +1,7 @@
 <template>
     <div class="right-box">
         <div class="rbox">
-            <div class="box-title">
+            <div class="box-title hvr-bounce-to-right">
                 <slot name="boxtitle"/>
             </div>
             <div class="box-content">
@@ -31,6 +31,8 @@
             padding: 5px 5px 5px 10px;
             height: 30px;
             line-height: 30px;
+            width: 338px;
+            cursor: pointer;
         }
         .box-content{
             background-color: white;

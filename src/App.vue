@@ -6,17 +6,18 @@
       <router-view/>
       </transition>
     </Layout>
-
+    <BottomBar></BottomBar>
   </div>
 </template>
 
 <script>
 import TopNav from "./components/TopNav";
 import Layout from "./components/Layout";
+import BottomBar from "./components/BottomBar";
 export default {
   name: 'App',
   components: {
-    TopNav,Layout
+    TopNav,Layout,BottomBar
   }
 }
 </script>

@@ -10,10 +10,10 @@
                     <router-link to="/userCenter"><li li class="hvr-fade">我的</li></router-link>
                 </ul>
             </div>
-            <div class="user-info">
-              <div class="user-info-img"><img :src="xj"/></div>
-                <div class="user-name">熊吉</div>
-            </div>
+<!--            <div class="user-info">-->
+<!--              <div class="user-info-img"><img :src="xj"/></div>-->
+<!--                <div class="user-name">熊吉</div>-->
+<!--            </div>-->
         </div>
     </div>
 </template>
@@ -65,9 +65,12 @@
         width: 1300px;
         height: 55px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
     }
     .top-nav-list{
-        padding-left: 100px;
+        margin-right: 50px;
+        /*padding-left: 100px;*/
     }
     .top-content ul{
         @extend %other-styles;

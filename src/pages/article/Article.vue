@@ -44,7 +44,7 @@
     min-height: 500px;
     padding: 50px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
-    border-radius: 2px;
+    border-radius: 10px;
 }
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;

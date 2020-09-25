@@ -2,7 +2,7 @@
     <div class="rightNav">
         <!-- 用户信息展示区 -->
         <RightBox>
-            <div slot="boxtitle">我是谁</div>
+            <div slot="boxtitle"><i class="el-icon-user-solid" style="padding-right: 5px"></i>我是谁</div>
             <div slot="boxcontent">
                 <div class="avatar">
                     <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" :size="60"></el-avatar>
@@ -20,7 +20,6 @@
                 </div>
             </div>
         </RightBox>
-
 
         <!-- 最热文章区 -->
         <RightBox>
@@ -68,9 +67,12 @@
             return{
                 tool1:tool1,
                 tool2:tool2,
-                tool3:tool3
+                tool3:tool3,
+                number:0,
+                tweenedNumber: 0
             }
         }
+
     }
 </script>
 <style lang="scss" scoped>
